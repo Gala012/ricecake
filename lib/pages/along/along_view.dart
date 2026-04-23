@@ -11,8 +11,8 @@ class AlongView extends GetView<AlongLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.lfcgmde.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.gzlwo.value
+              ? const CircularProgressIndicator(color: Colors.black)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class AlongView extends GetView<AlongLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.xjknoiv();
+              controller.grznxcah();
             },
             icon: const Icon(
               Icons.restart_alt,

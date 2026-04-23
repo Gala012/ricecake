@@ -25,7 +25,7 @@ class CreateFix extends GetView<AlongLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.kgzba.value)),
+              url: WebUri.uri(Uri.parse(controller.hscbkwn.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,

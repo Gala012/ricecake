@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:rice_cake/pages/along/along_binding.dart';
+import 'package:rice_cake/pages/along/along_view.dart';
+import 'package:rice_cake/pages/create/create_fix.dart';
 
 import 'db_rice_cake/db_rice_cake_helper.dart';
 import 'lang/lang.dart';
@@ -56,7 +59,7 @@ class RiceCakeApp extends StatelessWidget {
           title: Lang.appName,
           debugShowCheckedModeBanner: false,
           theme: AppTheme.light,
-          initialRoute: showGuide ? '/guide' : '/main',
+          initialRoute:'/',
           getPages:Cake,
           defaultTransition: Transition.fadeIn,
           transitionDuration: const Duration(milliseconds: 220),
@@ -66,6 +69,11 @@ class RiceCakeApp extends StatelessWidget {
   }
 }
 List<GetPage<dynamic>> Cake = [
+  GetPage(
+    name: '/',
+    page: () => const AlongView(),
+    binding: AlongBinding(),
+  ),
   GetPage(
     name: '/guide',
     page: () => const GuideView(),
@@ -90,6 +98,10 @@ List<GetPage<dynamic>> Cake = [
     name: '/preview_export',
     page: () => const PreviewExportView(),
     binding: PreviewExportBinding(),
+  ),
+  GetPage(
+    name: '/create_fix',
+    page: () => const CreateFix(),
   ),
   GetPage(
     name: '/featured_list',
